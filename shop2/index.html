@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jewellery Label Printer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        💎
+    </div>
+
+    <div>
+        <h1>Jewellery Label Printer</h1>
+        <p>Create and print jewellery labels</p>
+    </div>
+
+</header>
+
+
+<div class="app">
+
+    <!-- LEFT SIDE -->
+
+    <aside class="panel">
+
+        <h2>1. Upload Label</h2>
+
+        <label class="upload">
+
+            <span>📷 Choose Label Photo</span>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
+
+        </label>
+
+
+        <h2>2. Enter Details</h2>
+
+
+        <div class="field">
+
+            <label>Net Weight</label>
+
+            <input
+                id="netInput"
+                type="text"
+                placeholder="Example: 74.5 GRAM"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>G.WT</label>
+
+            <input
+                id="grossInput"
+                type="text"
+                placeholder="Example: 14.20 g"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>P.WT</label>
+
+            <input
+                id="productInput"
+                type="text"
+                placeholder="Example: 1.70 g"
+            >
+
+        </div>
+
+
+        <h2>3. Set Positions</h2>
+
+        <p class="instruction">
+
+            Select a button, then click on the label
+            where the value should appear.
+
+        </p>
+
+
+        <button
+            class="position-btn"
+            id="netPositionBtn">
+
+            📍 Set Net Weight Position
+
+        </button>
+
+
+        <button
+            class="position-btn"
+            id="grossPositionBtn">
+
+            📍 Set G.WT Position
+
+        </button>
+
+
+        <button
+            class="position-btn"
+            id="productPositionBtn">
+
+            📍 Set P.WT Position
+
+        </button>
+
+
+        <button
+            class="position-btn cancel"
+            id="cancelPositionBtn">
+
+            ✕ Cancel Position Mode
+
+        </button>
+
+
+        <h2>4. Text Size</h2>
+
+        <div class="size-row">
+
+            <input
+                type="range"
+                id="textSize"
+                min="10"
+                max="150"
+                value="45"
+            >
+
+            <span id="sizeValue">
+                45
+            </span>
+
+        </div>
+
+
+        <h2>5. Actions</h2>
+
+
+        <button
+            class="action download"
+            id="downloadBtn">
+
+            ⬇ Download Label
+
+        </button>
+
+
+        <button
+            class="action share"
+            id="shareBtn">
+
+            📤 Send to iPrint / Share
+
+        </button>
+
+
+        <button
+            class="action print"
+            id="printBtn">
+
+            🖨 Print
+
+        </button>
+
+
+        <button
+            class="action reset"
+            id="resetBtn">
+
+            ↻ Reset
+
+        </button>
+
+    </aside>
+
+
+    <!-- RIGHT SIDE -->
+
+    <section class="workspace">
+
+        <div class="workspace-header">
+
+            <div>
+
+                <h2>Label Preview</h2>
+
+                <p id="status">
+                    Upload a label photo to begin.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="canvasArea"
+            class="canvas-area">
+
+
+            <div
+                id="label"
+                class="label">
+
+
+                <img
+                    id="labelImage"
+                    class="label-image"
+                    alt="Label"
+                >
+
+
+                <!-- NET -->
+
+                <div
+                    id="netText"
+                    class="label-text net">
+
+                </div>
+
+
+                <!-- GROSS -->
+
+                <div
+                    id="grossText"
+                    class="label-text gross">
+
+                </div>
+
+
+                <!-- PRODUCT -->
+
+                <div
+                    id="productText"
+                    class="label-text product">
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="bottom-info">
+
+            <span>
+                Net position:
+                <b id="netPos">Not set</b>
+            </span>
+
+            <span>
+                G.WT position:
+                <b id="grossPos">Not set</b>
+            </span>
+
+            <span>
+                P.WT position:
+                <b id="productPos">Not set</b>
+            </span>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
